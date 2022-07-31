@@ -1,0 +1,14 @@
+spark-hadoop-hibench-slave-2-3
+spark-hadoop-hibench-slave-2-2
+spark-hadoop-hibench-slave-2-1
+spark-hadoop-hibench-slave-2-0
+spark-hadoop-hibench-master-2-0
+spark-hadoop-hibench-slave-1-3
+spark-hadoop-hibench-slave-1-2
+spark-hadoop-hibench-slave-1-1
+spark-hadoop-hibench-slave-1-0
+spark-hadoop-hibench-master-1-0
+spark-hadoop-hibench-master-4-0  4
+spark-hadoop-hibench-master-3-0  4
+spark-hadoop-hibench-master-2-0  4
+spark-hadoop-hibench-master-1-0  4

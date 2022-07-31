@@ -1,0 +1,797 @@
+22/07/22 16:08:23 WARN spark.SparkConf: The configuration key 'spark.yarn.executor.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.executor.memoryOverhead' instead.
+22/07/22 16:08:23 WARN spark.SparkConf: The configuration key 'spark.yarn.driver.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.driver.memoryOverhead' instead.
+22/07/22 16:08:23 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/07/22 16:08:24 WARN spark.SparkConf: The configuration key 'spark.yarn.executor.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.executor.memoryOverhead' instead.
+22/07/22 16:08:24 WARN spark.SparkConf: The configuration key 'spark.yarn.driver.memoryOverhead' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.driver.memoryOverhead' instead.
+22/07/22 16:08:24 INFO spark.SparkContext: Running Spark version 2.4.6
+22/07/22 16:08:24 INFO spark.SparkContext: Submitted application: ScalaPageRank
+22/07/22 16:08:24 INFO spark.SecurityManager: Changing view acls to: root
+22/07/22 16:08:24 INFO spark.SecurityManager: Changing modify acls to: root
+22/07/22 16:08:24 INFO spark.SecurityManager: Changing view acls groups to: 
+22/07/22 16:08:24 INFO spark.SecurityManager: Changing modify acls groups to: 
+22/07/22 16:08:24 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+22/07/22 16:08:24 INFO util.Utils: Successfully started service 'sparkDriver' on port 45715.
+22/07/22 16:08:24 INFO spark.SparkEnv: Registering MapOutputTracker
+22/07/22 16:08:24 INFO spark.SparkEnv: Registering BlockManagerMaster
+22/07/22 16:08:24 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/07/22 16:08:24 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/07/22 16:08:24 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-36ef8ee1-9c79-4319-9523-2c816788721a
+22/07/22 16:08:24 INFO memory.MemoryStore: MemoryStore started with capacity 1007.8 MB
+22/07/22 16:08:24 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+22/07/22 16:08:24 INFO util.log: Logging initialized @1621ms
+22/07/22 16:08:24 INFO server.Server: jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+22/07/22 16:08:24 INFO server.Server: Started @1689ms
+22/07/22 16:08:24 INFO server.AbstractConnector: Started ServerConnector@3e792ce3{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+22/07/22 16:08:24 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4201a617{/jobs,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5aa360ea{/jobs/json,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6548bb7d{/jobs/job,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@54336c81{/jobs/job/json,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1556f2dd{/stages,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@35e52059{/stages/json,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@62577d6{/stages/stage,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@772485dd{/stages/stage/json,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5a12c728{/stages/pool,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@79ab3a71{/stages/pool/json,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6e5bfdfc{/storage,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3d829787{/storage/json,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@71652c98{/storage/rdd,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@51bde877{/storage/rdd/json,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@60b85ba1{/environment,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@492fc69e{/environment/json,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@117632cf{/executors,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2fb68ec6{/executors/json,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@d71adc2{/executors/threadDump,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3add81c4{/executors/threadDump/json,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1a1d3c1a{/static,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6d2260db{/,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1f2d2181{/api,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7668d560{/jobs/job/kill,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@46292372{/stages/stage/kill,null,AVAILABLE,@Spark}
+22/07/22 16:08:24 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local:4040
+22/07/22 16:08:24 INFO spark.SparkContext: Added JAR file:/root/spark-hadoop/HiBench-HiBench-7.1/sparkbench/assembly/target/sparkbench-assembly-7.1-dist.jar at spark://spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local:45715/jars/sparkbench-assembly-7.1-dist.jar with timestamp 1658477304712
+22/07/22 16:08:25 INFO client.RMProxy: Connecting to ResourceManager at spark-hadoop-hibench-master-2.default.svc.cluster.local/10.244.1.206:8032
+22/07/22 16:08:25 INFO yarn.Client: Requesting a new application from cluster with 4 NodeManagers
+22/07/22 16:08:25 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+22/07/22 16:08:25 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+22/07/22 16:08:25 INFO yarn.Client: Setting up container launch context for our AM
+22/07/22 16:08:25 INFO yarn.Client: Setting up the launch environment for our AM container
+22/07/22 16:08:25 INFO yarn.Client: Preparing resources for our AM container
+22/07/22 16:08:25 WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+22/07/22 16:08:27 INFO yarn.Client: Uploading resource file:/tmp/spark-e992df26-18ea-4c39-9b2c-39041f0cccbb/__spark_libs__893735805684173678.zip -> hdfs://10.0.0.61:9005/user/root/.sparkStaging/application_1658476049130_0002/__spark_libs__893735805684173678.zip
+22/07/22 16:08:27 INFO yarn.Client: Uploading resource file:/tmp/spark-e992df26-18ea-4c39-9b2c-39041f0cccbb/__spark_conf__8925181738144584023.zip -> hdfs://10.0.0.61:9005/user/root/.sparkStaging/application_1658476049130_0002/__spark_conf__.zip
+22/07/22 16:08:27 INFO spark.SecurityManager: Changing view acls to: root
+22/07/22 16:08:27 INFO spark.SecurityManager: Changing modify acls to: root
+22/07/22 16:08:27 INFO spark.SecurityManager: Changing view acls groups to: 
+22/07/22 16:08:27 INFO spark.SecurityManager: Changing modify acls groups to: 
+22/07/22 16:08:27 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+22/07/22 16:08:28 INFO yarn.Client: Submitting application application_1658476049130_0002 to ResourceManager
+22/07/22 16:08:28 INFO impl.YarnClientImpl: Submitted application application_1658476049130_0002
+22/07/22 16:08:28 INFO cluster.SchedulerExtensionServices: Starting Yarn extension services with app application_1658476049130_0002 and attemptId None
+22/07/22 16:08:29 INFO yarn.Client: Application report for application_1658476049130_0002 (state: ACCEPTED)
+22/07/22 16:08:29 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1658477308652
+	 final status: UNDEFINED
+	 tracking URL: http://spark-hadoop-hibench-master-2.default.svc.cluster.local:8088/proxy/application_1658476049130_0002/
+	 user: root
+22/07/22 16:08:30 INFO yarn.Client: Application report for application_1658476049130_0002 (state: ACCEPTED)
+22/07/22 16:08:31 INFO yarn.Client: Application report for application_1658476049130_0002 (state: ACCEPTED)
+22/07/22 16:08:32 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> spark-hadoop-hibench-master-2.default.svc.cluster.local, PROXY_URI_BASES -> http://spark-hadoop-hibench-master-2.default.svc.cluster.local:8088/proxy/application_1658476049130_0002), /proxy/application_1658476049130_0002
+22/07/22 16:08:32 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+22/07/22 16:08:32 INFO yarn.Client: Application report for application_1658476049130_0002 (state: RUNNING)
+22/07/22 16:08:32 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 10.244.1.221
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1658477308652
+	 final status: UNDEFINED
+	 tracking URL: http://spark-hadoop-hibench-master-2.default.svc.cluster.local:8088/proxy/application_1658476049130_0002/
+	 user: root
+22/07/22 16:08:32 INFO cluster.YarnClientSchedulerBackend: Application application_1658476049130_0002 has started running.
+22/07/22 16:08:32 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34713.
+22/07/22 16:08:32 INFO netty.NettyBlockTransferService: Server created on spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local:34713
+22/07/22 16:08:32 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/07/22 16:08:32 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local, 34713, None)
+22/07/22 16:08:32 INFO storage.BlockManagerMasterEndpoint: Registering block manager spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local:34713 with 1007.8 MB RAM, BlockManagerId(driver, spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local, 34713, None)
+22/07/22 16:08:32 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local, 34713, None)
+22/07/22 16:08:32 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local, 34713, None)
+22/07/22 16:08:32 INFO ui.JettyUtils: Adding filter org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter to /metrics/json.
+22/07/22 16:08:32 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@8b13d91{/metrics/json,null,AVAILABLE,@Spark}
+22/07/22 16:08:35 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.244.1.221:47536) with ID 3
+22/07/22 16:08:35 INFO storage.BlockManagerMasterEndpoint: Registering block manager spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local:42717 with 1007.8 MB RAM, BlockManagerId(3, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, 42717, None)
+22/07/22 16:08:35 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.244.1.215:40836) with ID 2
+22/07/22 16:08:35 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.244.1.207:33736) with ID 1
+22/07/22 16:08:35 INFO storage.BlockManagerMasterEndpoint: Registering block manager spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local:37701 with 1007.8 MB RAM, BlockManagerId(2, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, 37701, None)
+22/07/22 16:08:35 INFO storage.BlockManagerMasterEndpoint: Registering block manager spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local:42865 with 1007.8 MB RAM, BlockManagerId(1, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, 42865, None)
+22/07/22 16:08:36 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.244.1.218:46074) with ID 4
+22/07/22 16:08:36 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+22/07/22 16:08:36 INFO storage.BlockManagerMasterEndpoint: Registering block manager spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local:41099 with 1007.8 MB RAM, BlockManagerId(4, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, 41099, None)
+22/07/22 16:08:36 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 241.7 KB, free 1007.6 MB)
+22/07/22 16:08:36 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.3 KB, free 1007.6 MB)
+22/07/22 16:08:36 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local:34713 (size: 23.3 KB, free: 1007.8 MB)
+22/07/22 16:08:36 INFO spark.SparkContext: Created broadcast 0 from textFile at SparkPageRank.scala:53
+22/07/22 16:08:36 INFO mapred.FileInputFormat: Total input paths to process : 16
+22/07/22 16:08:36 INFO Configuration.deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+22/07/22 16:08:36 INFO io.HadoopMapRedCommitProtocol: Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+22/07/22 16:08:36 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+22/07/22 16:08:36 INFO spark.SparkContext: Starting job: runJob at SparkHadoopWriter.scala:78
+22/07/22 16:08:37 INFO scheduler.DAGScheduler: Registering RDD 3 (distinct at SparkPageRank.scala:58) as input to shuffle 2
+22/07/22 16:08:37 INFO scheduler.DAGScheduler: Registering RDD 5 (distinct at SparkPageRank.scala:58) as input to shuffle 1
+22/07/22 16:08:37 INFO scheduler.DAGScheduler: Registering RDD 12 (flatMap at SparkPageRank.scala:62) as input to shuffle 0
+22/07/22 16:08:37 INFO scheduler.DAGScheduler: Got job 0 (runJob at SparkHadoopWriter.scala:78) with 8 output partitions
+22/07/22 16:08:37 INFO scheduler.DAGScheduler: Final stage: ResultStage 3 (runJob at SparkHadoopWriter.scala:78)
+22/07/22 16:08:37 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+22/07/22 16:08:37 INFO scheduler.DAGScheduler: Missing parents: List(ShuffleMapStage 2)
+22/07/22 16:08:37 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at distinct at SparkPageRank.scala:58), which has no missing parents
+22/07/22 16:08:37 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.7 KB, free 1007.6 MB)
+22/07/22 16:08:37 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.7 KB, free 1007.6 MB)
+22/07/22 16:08:37 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local:34713 (size: 2.7 KB, free: 1007.8 MB)
+22/07/22 16:08:37 INFO spark.SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1163
+22/07/22 16:08:37 INFO scheduler.DAGScheduler: Submitting 16 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at distinct at SparkPageRank.scala:58) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+22/07/22 16:08:37 INFO cluster.YarnScheduler: Adding task set 0.0 with 16 tasks
+22/07/22 16:08:37 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 4, partition 0, RACK_LOCAL, 7922 bytes)
+22/07/22 16:08:37 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 1, RACK_LOCAL, 7922 bytes)
+22/07/22 16:08:37 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 2, RACK_LOCAL, 7922 bytes)
+22/07/22 16:08:37 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 1, partition 3, RACK_LOCAL, 7922 bytes)
+22/07/22 16:08:37 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 4, partition 4, RACK_LOCAL, 7922 bytes)
+22/07/22 16:08:37 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 5, RACK_LOCAL, 7922 bytes)
+22/07/22 16:08:37 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 6, RACK_LOCAL, 7922 bytes)
+22/07/22 16:08:37 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 1, partition 7, RACK_LOCAL, 7922 bytes)
+22/07/22 16:08:37 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local:42865 (size: 2.7 KB, free: 1007.8 MB)
+22/07/22 16:08:37 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local:41099 (size: 2.7 KB, free: 1007.8 MB)
+22/07/22 16:08:37 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local:37701 (size: 2.7 KB, free: 1007.8 MB)
+22/07/22 16:08:37 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local:42717 (size: 2.7 KB, free: 1007.8 MB)
+22/07/22 16:08:38 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local:41099 (size: 23.3 KB, free: 1007.8 MB)
+22/07/22 16:08:38 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local:42865 (size: 23.3 KB, free: 1007.8 MB)
+22/07/22 16:08:38 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local:37701 (size: 23.3 KB, free: 1007.8 MB)
+22/07/22 16:08:38 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local:42717 (size: 23.3 KB, free: 1007.8 MB)
+22/07/22 16:09:42 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 1, partition 8, RACK_LOCAL, 7922 bytes)
+22/07/22 16:09:42 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 65155 ms on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 1) (1/16)
+22/07/22 16:09:44 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 1, partition 9, RACK_LOCAL, 7922 bytes)
+22/07/22 16:09:44 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 67026 ms on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 1) (2/16)
+22/07/22 16:09:46 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 10, RACK_LOCAL, 7922 bytes)
+22/07/22 16:09:46 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 68979 ms on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 3) (3/16)
+22/07/22 16:09:48 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 4, partition 11, RACK_LOCAL, 7922 bytes)
+22/07/22 16:09:48 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 71581 ms on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 4) (4/16)
+22/07/22 16:09:52 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 4, partition 12, RACK_LOCAL, 7922 bytes)
+22/07/22 16:09:52 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 75510 ms on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 4) (5/16)
+22/07/22 16:09:53 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 13, RACK_LOCAL, 7922 bytes)
+22/07/22 16:09:53 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 76215 ms on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 3) (6/16)
+22/07/22 16:09:59 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 14, RACK_LOCAL, 7922 bytes)
+22/07/22 16:09:59 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 82614 ms on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 2) (7/16)
+22/07/22 16:10:04 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 15, RACK_LOCAL, 7922 bytes)
+22/07/22 16:10:04 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 87259 ms on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 2) (8/16)
+22/07/22 16:11:01 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 79347 ms on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 1) (9/16)
+22/07/22 16:11:04 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 79769 ms on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 1) (10/16)
+22/07/22 16:11:12 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 79753 ms on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 4) (11/16)
+22/07/22 16:11:15 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 87118 ms on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 4) (12/16)
+22/07/22 16:11:21 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 95591 ms on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 3) (13/16)
+22/07/22 16:11:27 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 93636 ms on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 3) (14/16)
+22/07/22 16:11:29 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 89772 ms on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 2) (15/16)
+22/07/22 16:11:33 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 89037 ms on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 2) (16/16)
+22/07/22 16:11:33 INFO cluster.YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+22/07/22 16:11:33 INFO scheduler.DAGScheduler: ShuffleMapStage 0 (distinct at SparkPageRank.scala:58) finished in 176.359 s
+22/07/22 16:11:33 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/07/22 16:11:33 INFO scheduler.DAGScheduler: running: Set()
+22/07/22 16:11:33 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 1, ShuffleMapStage 2, ResultStage 3)
+22/07/22 16:11:34 INFO scheduler.DAGScheduler: failed: Set()
+22/07/22 16:11:34 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[5] at distinct at SparkPageRank.scala:58), which has no missing parents
+22/07/22 16:11:34 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 4.9 KB, free 1007.6 MB)
+22/07/22 16:11:34 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.7 KB, free 1007.6 MB)
+22/07/22 16:11:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local:34713 (size: 2.7 KB, free: 1007.8 MB)
+22/07/22 16:11:34 INFO spark.SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1163
+22/07/22 16:11:34 INFO scheduler.DAGScheduler: Submitting 16 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[5] at distinct at SparkPageRank.scala:58) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+22/07/22 16:11:34 INFO cluster.YarnScheduler: Adding task set 1.0 with 16 tasks
+22/07/22 16:11:34 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 1.0 (TID 16, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 0, NODE_LOCAL, 7662 bytes)
+22/07/22 16:11:34 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 1.0 (TID 17, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 1, partition 1, NODE_LOCAL, 7662 bytes)
+22/07/22 16:11:34 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 1.0 (TID 18, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 4, partition 2, NODE_LOCAL, 7662 bytes)
+22/07/22 16:11:34 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 1.0 (TID 19, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 3, NODE_LOCAL, 7662 bytes)
+22/07/22 16:11:34 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 1.0 (TID 20, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 4, NODE_LOCAL, 7662 bytes)
+22/07/22 16:11:34 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 1.0 (TID 21, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 1, partition 5, NODE_LOCAL, 7662 bytes)
+22/07/22 16:11:34 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 1.0 (TID 22, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 4, partition 6, NODE_LOCAL, 7662 bytes)
+22/07/22 16:11:34 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 1.0 (TID 23, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 7, NODE_LOCAL, 7662 bytes)
+22/07/22 16:11:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local:37701 (size: 2.7 KB, free: 1007.8 MB)
+22/07/22 16:11:34 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local:42865 (size: 2.7 KB, free: 1007.8 MB)
+22/07/22 16:11:35 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.244.1.215:40836
+22/07/22 16:11:35 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.244.1.207:33736
+22/07/22 16:11:36 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local:42717 (size: 2.7 KB, free: 1007.8 MB)
+22/07/22 16:11:36 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local:41099 (size: 2.7 KB, free: 1007.8 MB)
+22/07/22 16:11:36 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.244.1.218:46074
+22/07/22 16:11:36 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.244.1.221:47536
+22/07/22 16:12:46 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 1.0 (TID 24, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 8, NODE_LOCAL, 7662 bytes)
+22/07/22 16:12:46 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 1.0 (TID 16) in 72042 ms on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 2) (1/16)
+22/07/22 16:12:47 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 1.0 (TID 25, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 9, NODE_LOCAL, 7662 bytes)
+22/07/22 16:12:47 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 1.0 (TID 20) in 72548 ms on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 2) (2/16)
+22/07/22 16:12:51 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 1.0 (TID 26, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 4, partition 10, NODE_LOCAL, 7662 bytes)
+22/07/22 16:12:51 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 1.0 (TID 22) in 76688 ms on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 4) (3/16)
+22/07/22 16:12:52 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 1.0 (TID 27, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 4, partition 11, NODE_LOCAL, 7662 bytes)
+22/07/22 16:12:52 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 1.0 (TID 18) in 77766 ms on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 4) (4/16)
+22/07/22 16:12:55 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 1.0 (TID 28, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 12, NODE_LOCAL, 7662 bytes)
+22/07/22 16:12:55 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 1.0 (TID 23) in 81219 ms on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 3) (5/16)
+22/07/22 16:12:56 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 1.0 (TID 29, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 1, partition 13, NODE_LOCAL, 7662 bytes)
+22/07/22 16:12:56 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 1.0 (TID 21) in 82009 ms on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 1) (6/16)
+22/07/22 16:12:58 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 1.0 (TID 30, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 14, NODE_LOCAL, 7662 bytes)
+22/07/22 16:12:58 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 1.0 (TID 19) in 84419 ms on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 3) (7/16)
+22/07/22 16:13:09 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 1.0 (TID 31, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 1, partition 15, NODE_LOCAL, 7662 bytes)
+22/07/22 16:13:09 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 1.0 (TID 17) in 94636 ms on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 1) (8/16)
+22/07/22 16:13:21 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 1.0 (TID 29) in 25194 ms on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 1) (9/16)
+22/07/22 16:13:44 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 1.0 (TID 31) in 35422 ms on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 1) (10/16)
+22/07/22 16:13:51 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 1.0 (TID 24) in 64474 ms on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 2) (11/16)
+22/07/22 16:13:54 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 1.0 (TID 25) in 67002 ms on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 2) (12/16)
+22/07/22 16:14:00 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 1.0 (TID 27) in 68465 ms on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 4) (13/16)
+22/07/22 16:14:01 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 1.0 (TID 26) in 70138 ms on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 4) (14/16)
+22/07/22 16:14:12 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 1.0 (TID 28) in 77127 ms on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 3) (15/16)
+22/07/22 16:14:14 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 1.0 (TID 30) in 75797 ms on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local (executor 3) (16/16)
+22/07/22 16:14:14 INFO cluster.YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+22/07/22 16:14:14 INFO scheduler.DAGScheduler: ShuffleMapStage 1 (distinct at SparkPageRank.scala:58) finished in 160.228 s
+22/07/22 16:14:14 INFO scheduler.DAGScheduler: looking for newly runnable stages
+22/07/22 16:14:14 INFO scheduler.DAGScheduler: running: Set()
+22/07/22 16:14:14 INFO scheduler.DAGScheduler: waiting: Set(ShuffleMapStage 2, ResultStage 3)
+22/07/22 16:14:14 INFO scheduler.DAGScheduler: failed: Set()
+22/07/22 16:14:14 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[12] at flatMap at SparkPageRank.scala:62), which has no missing parents
+22/07/22 16:14:14 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 6.8 KB, free 1007.6 MB)
+22/07/22 16:14:14 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 3.4 KB, free 1007.6 MB)
+22/07/22 16:14:14 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local:34713 (size: 3.4 KB, free: 1007.8 MB)
+22/07/22 16:14:14 INFO spark.SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1163
+22/07/22 16:14:14 INFO scheduler.DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[12] at flatMap at SparkPageRank.scala:62) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+22/07/22 16:14:14 INFO cluster.YarnScheduler: Adding task set 2.0 with 8 tasks
+22/07/22 16:14:14 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 2.0 (TID 32, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 1, partition 0, NODE_LOCAL, 7892 bytes)
+22/07/22 16:14:14 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 2.0 (TID 33, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 1, NODE_LOCAL, 7892 bytes)
+22/07/22 16:14:14 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 2.0 (TID 34, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 2, NODE_LOCAL, 7892 bytes)
+22/07/22 16:14:14 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 2.0 (TID 35, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 4, partition 3, NODE_LOCAL, 7892 bytes)
+22/07/22 16:14:14 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 2.0 (TID 36, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 1, partition 4, NODE_LOCAL, 7892 bytes)
+22/07/22 16:14:14 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 2.0 (TID 37, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 5, NODE_LOCAL, 7892 bytes)
+22/07/22 16:14:14 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 2.0 (TID 38, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 6, NODE_LOCAL, 7892 bytes)
+22/07/22 16:14:14 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 2.0 (TID 39, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 4, partition 7, NODE_LOCAL, 7892 bytes)
+22/07/22 16:14:14 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local:42865 (size: 3.4 KB, free: 1007.8 MB)
+22/07/22 16:14:14 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local:37701 (size: 3.4 KB, free: 1007.8 MB)
+22/07/22 16:14:14 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local:42717 (size: 3.4 KB, free: 1007.8 MB)
+22/07/22 16:14:14 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local:41099 (size: 3.4 KB, free: 1007.8 MB)
+22/07/22 16:14:14 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.244.1.221:47536
+22/07/22 16:14:14 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.244.1.215:40836
+22/07/22 16:14:14 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.244.1.207:33736
+22/07/22 16:14:14 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.244.1.218:46074
+22/07/22 16:15:04 INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Disabling executor 4.
+22/07/22 16:15:04 INFO scheduler.DAGScheduler: Executor lost: 4 (epoch 2)
+22/07/22 16:15:04 INFO storage.BlockManagerMasterEndpoint: Trying to remove executor 4 from BlockManagerMaster.
+22/07/22 16:15:04 INFO storage.BlockManagerMasterEndpoint: Removing block manager BlockManagerId(4, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, 41099, None)
+22/07/22 16:15:04 INFO storage.BlockManagerMaster: Removed 4 successfully in removeExecutor
+22/07/22 16:15:04 INFO scheduler.DAGScheduler: Shuffle files lost for executor: 4 (epoch 2)
+22/07/22 16:15:31 WARN scheduler.TaskSetManager: Lost task 5.0 in stage 2.0 (TID 37, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2): FetchFailed(BlockManagerId(4, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, 41099, None), shuffleId=1, mapId=11, reduceId=5, message=
+org.apache.spark.shuffle.FetchFailedException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:554)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:485)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:64)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:435)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:441)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:31)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap.insertAll(ExternalAppendOnlyMap.scala:156)
+	at org.apache.spark.Aggregator.combineValuesByKey(Aggregator.scala:41)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:90)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:105)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:359)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:357)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1165)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:1091)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:882)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:357)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:308)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:141)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:137)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.rdd.CoGroupedRDD.compute(CoGroupedRDD.scala:137)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+)
+22/07/22 16:15:31 INFO scheduler.TaskSetManager: Task 5.0 in stage 2.0 (TID 37) failed, but the task will not be re-executed (either because the task failed with a shuffle data fetch failure, so the previous stage needs to be re-run, or because a different copy of the task has already succeeded).
+22/07/22 16:15:31 INFO scheduler.DAGScheduler: Marking ShuffleMapStage 2 (flatMap at SparkPageRank.scala:62) as failed due to a fetch failure from ShuffleMapStage 1 (distinct at SparkPageRank.scala:58)
+22/07/22 16:15:31 INFO scheduler.DAGScheduler: ShuffleMapStage 2 (flatMap at SparkPageRank.scala:62) failed in 76.407 s due to org.apache.spark.shuffle.FetchFailedException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:554)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:485)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:64)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:435)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:441)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:31)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap.insertAll(ExternalAppendOnlyMap.scala:156)
+	at org.apache.spark.Aggregator.combineValuesByKey(Aggregator.scala:41)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:90)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:105)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:359)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:357)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1165)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:1091)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:882)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:357)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:308)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:141)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:137)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.rdd.CoGroupedRDD.compute(CoGroupedRDD.scala:137)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+22/07/22 16:15:31 INFO scheduler.DAGScheduler: Resubmitting ShuffleMapStage 1 (distinct at SparkPageRank.scala:58) and ShuffleMapStage 2 (flatMap at SparkPageRank.scala:62) due to fetch failure
+22/07/22 16:15:31 INFO scheduler.DAGScheduler: Resubmitting failed stages
+22/07/22 16:15:31 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at distinct at SparkPageRank.scala:58), which has no missing parents
+22/07/22 16:15:31 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 5.5 KB, free 1007.6 MB)
+22/07/22 16:15:31 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.1 KB, free 1007.6 MB)
+22/07/22 16:15:31 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on spark-hadoop-hibench-master-2-0.spark-hadoop-hibench-master-2.default.svc.cluster.local:34713 (size: 3.1 KB, free: 1007.8 MB)
+22/07/22 16:15:31 INFO spark.SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1163
+22/07/22 16:15:31 INFO scheduler.DAGScheduler: Submitting 4 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at distinct at SparkPageRank.scala:58) (first 15 tasks are for partitions Vector(0, 4, 11, 12))
+22/07/22 16:15:31 INFO cluster.YarnScheduler: Adding task set 0.1 with 4 tasks
+22/07/22 16:15:31 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.1 (TID 40, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 0, RACK_LOCAL, 7922 bytes)
+22/07/22 16:15:32 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local:37701 (size: 3.1 KB, free: 1007.8 MB)
+22/07/22 16:15:35 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.1 (TID 41, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2, partition 4, RACK_LOCAL, 7922 bytes)
+22/07/22 16:15:35 WARN scheduler.TaskSetManager: Lost task 1.0 in stage 2.0 (TID 33, spark-hadoop-hibench-slave-2-1.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 2): FetchFailed(BlockManagerId(4, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, 41099, None), shuffleId=1, mapId=2, reduceId=1, message=
+org.apache.spark.shuffle.FetchFailedException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:554)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:485)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:64)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:435)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:441)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:31)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap.insertAll(ExternalAppendOnlyMap.scala:156)
+	at org.apache.spark.Aggregator.combineValuesByKey(Aggregator.scala:41)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:90)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:105)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:359)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:357)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1165)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:1091)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:882)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:357)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:308)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:141)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:137)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.rdd.CoGroupedRDD.compute(CoGroupedRDD.scala:137)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+)
+22/07/22 16:15:35 INFO scheduler.TaskSetManager: Task 1.0 in stage 2.0 (TID 33) failed, but the task will not be re-executed (either because the task failed with a shuffle data fetch failure, so the previous stage needs to be re-run, or because a different copy of the task has already succeeded).
+22/07/22 16:15:36 INFO scheduler.DAGScheduler: Resubmitting ShuffleMapStage 1 (distinct at SparkPageRank.scala:58) and ShuffleMapStage 2 (flatMap at SparkPageRank.scala:62) due to fetch failure
+22/07/22 16:15:36 INFO scheduler.DAGScheduler: Resubmitting failed stages
+22/07/22 16:16:00 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 0.1 (TID 42, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 11, RACK_LOCAL, 7922 bytes)
+22/07/22 16:16:00 WARN scheduler.TaskSetManager: Lost task 6.0 in stage 2.0 (TID 38, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3): FetchFailed(BlockManagerId(4, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, 41099, None), shuffleId=1, mapId=2, reduceId=6, message=
+org.apache.spark.shuffle.FetchFailedException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:554)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:485)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:64)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:435)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:441)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:31)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap.insertAll(ExternalAppendOnlyMap.scala:156)
+	at org.apache.spark.Aggregator.combineValuesByKey(Aggregator.scala:41)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:90)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:105)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:359)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:357)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1165)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:1091)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:882)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:357)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:308)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:141)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:137)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.rdd.CoGroupedRDD.compute(CoGroupedRDD.scala:137)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+)
+22/07/22 16:16:00 INFO scheduler.TaskSetManager: Task 6.0 in stage 2.0 (TID 38) failed, but the task will not be re-executed (either because the task failed with a shuffle data fetch failure, so the previous stage needs to be re-run, or because a different copy of the task has already succeeded).
+22/07/22 16:16:00 INFO scheduler.DAGScheduler: Resubmitting ShuffleMapStage 1 (distinct at SparkPageRank.scala:58) and ShuffleMapStage 2 (flatMap at SparkPageRank.scala:62) due to fetch failure
+22/07/22 16:16:00 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local:42717 (size: 3.1 KB, free: 1007.8 MB)
+22/07/22 16:16:00 INFO scheduler.DAGScheduler: Resubmitting failed stages
+22/07/22 16:16:07 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 0.1 (TID 43, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3, partition 12, RACK_LOCAL, 7922 bytes)
+22/07/22 16:16:07 WARN scheduler.TaskSetManager: Lost task 2.0 in stage 2.0 (TID 34, spark-hadoop-hibench-slave-2-3.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 3): FetchFailed(BlockManagerId(4, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, 41099, None), shuffleId=1, mapId=6, reduceId=2, message=
+org.apache.spark.shuffle.FetchFailedException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:554)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:485)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:64)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:435)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:441)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:31)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap.insertAll(ExternalAppendOnlyMap.scala:156)
+	at org.apache.spark.Aggregator.combineValuesByKey(Aggregator.scala:41)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:90)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:105)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:359)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:357)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1165)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:1091)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:882)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:357)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:308)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:141)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:137)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.rdd.CoGroupedRDD.compute(CoGroupedRDD.scala:137)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+)
+22/07/22 16:16:07 INFO scheduler.TaskSetManager: Task 2.0 in stage 2.0 (TID 34) failed, but the task will not be re-executed (either because the task failed with a shuffle data fetch failure, so the previous stage needs to be re-run, or because a different copy of the task has already succeeded).
+22/07/22 16:16:07 INFO scheduler.DAGScheduler: Resubmitting ShuffleMapStage 1 (distinct at SparkPageRank.scala:58) and ShuffleMapStage 2 (flatMap at SparkPageRank.scala:62) due to fetch failure
+22/07/22 16:16:07 INFO scheduler.DAGScheduler: Resubmitting failed stages
+22/07/22 16:16:33 WARN scheduler.TaskSetManager: Lost task 0.0 in stage 2.0 (TID 32, spark-hadoop-hibench-slave-2-0.spark-hadoop-hibench-slave-2.default.svc.cluster.local, executor 1): FetchFailed(BlockManagerId(4, spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local, 41099, None), shuffleId=1, mapId=10, reduceId=0, message=
+org.apache.spark.shuffle.FetchFailedException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:554)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:485)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:64)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:435)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:441)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:409)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:31)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at org.apache.spark.util.collection.ExternalAppendOnlyMap.insertAll(ExternalAppendOnlyMap.scala:156)
+	at org.apache.spark.Aggregator.combineValuesByKey(Aggregator.scala:41)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:90)
+	at org.apache.spark.rdd.ShuffledRDD.compute(ShuffledRDD.scala:105)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:359)
+	at org.apache.spark.rdd.RDD$$anonfun$7.apply(RDD.scala:357)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1165)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:1091)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:1156)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:882)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:357)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:308)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:141)
+	at org.apache.spark.rdd.CoGroupedRDD$$anonfun$compute$2.apply(CoGroupedRDD.scala:137)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.List.foreach(List.scala:392)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at org.apache.spark.rdd.CoGroupedRDD.compute(CoGroupedRDD.scala:137)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:346)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:310)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:99)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:55)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Failed to connect to spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:245)
+	at org.apache.spark.network.client.TransportClientFactory.createClient(TransportClientFactory.java:187)
+	at org.apache.spark.network.netty.NettyBlockTransferService$$anon$2.createAndStart(NettyBlockTransferService.scala:114)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.fetchAllOutstanding(RetryingBlockFetcher.java:141)
+	at org.apache.spark.network.shuffle.RetryingBlockFetcher.lambda$initiateRetry$0(RetryingBlockFetcher.java:169)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: spark-hadoop-hibench-slave-2-2.spark-hadoop-hibench-slave-2.default.svc.cluster.local/10.244.1.224:41099
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+
+)
+22/07/22 16:16:33 INFO scheduler.TaskSetManager: Task 0.0 in stage 2.0 (TID 32) failed, but the task will not be re-executed (either because the task failed with a shuffle data fetch failure, so the previous stage needs to be re-run, or because a different copy of the task has already succeeded).
+22/07/22 16:16:33 INFO scheduler.DAGScheduler: Resubmitting ShuffleMapStage 1 (distinct at SparkPageRank.scala:58) and ShuffleMapStage 2 (flatMap at SparkPageRank.scala:62) due to fetch failure
+22/07/22 16:16:34 INFO scheduler.DAGScheduler: Resubmitting failed stages
